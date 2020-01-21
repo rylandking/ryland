@@ -1,0 +1,245 @@
+h1 {
+  font-size: 48px;
+}
+
+.landing-page-top {
+  top: 0px;
+  position: relative;
+}
+
+.font-sixteen {
+  font-size: 20px;
+}
+
+.landing-top {
+  color: white;
+  position: absolute;
+  width: 80%;
+  padding: 0px;
+  margin: 0px;
+  top: 4rem;
+}
+
+.header-line-white {
+  border-color: #ffffff;
+  opacity: 0.5;
+}
+
+.header-line-black {
+  border-color: #000000 !important;
+  opacity: 0.5;
+}
+
+.white-link {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.white-link:hover {
+  color: #00edff !important;
+  text-decoration: underline !important;
+}
+
+.black-link {
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+.black-link:hover {
+  /* color: #00ffff !important; */
+  color: #08cfdd !important;
+  text-decoration: underline !important;
+}
+
+.header-copy {
+  font-size: 48px;
+  margin-top: 12rem;
+}
+
+.bio-header-copy {
+  font-size: 48px;
+  margin-top: 1rem;
+}
+
+#landing-contact-info {
+  margin-top: 3rem;
+}
+
+.light-font-weight {
+  font-weight: 300;
+}
+
+.opaque {
+  opacity: 0.7;
+}
+
+.bounce {
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bounce p {
+  position: absolute;
+  width: 30%;
+  height: 25%;
+  margin: 0;
+  line-height: 20px;
+  text-align: left;
+  /* Starting position */
+  -moz-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  /* Apply animation to this element */
+  -moz-animation: bounce 1.5s linear infinite alternate;
+  -webkit-animation: bounce 1.5s linear infinite alternate;
+  animation: bounce 1.5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: translateY(-50%);
+  }
+  100% {
+    -moz-transform: translateY(50%);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+  }
+}
+@keyframes bounce {
+  0% {
+    -moz-transform: translateY(-50%); /* Browser bug fix */
+    -webkit-transform: translateY(-50%); /* Browser bug fix */
+    transform: translateY(-50%);
+  }
+  100% {
+    -moz-transform: translateY(50%); /* Browser bug fix */
+    -webkit-transform: translateY(50%); /* Browser bug fix */
+    transform: translateY(50%);
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Load images once through so no flicker */
+#load-images {
+  animation-name: loadImages;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes loadImages {
+  0%,
+  18% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image-friends-desktop.png?alt=media&token=1ab7f515-d825-4409-9951-5a28e2bf01ec');
+  }
+  20%,
+  38% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image2.png?alt=media&token=e8d80a2a-d9d3-456b-82c7-88f69f456c71');
+  }
+  40%,
+  58% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image3_2.png?alt=media&token=5421f8ba-70b1-4c45-a000-9d3a2436bba4');
+  }
+  60%,
+  78% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image4.png?alt=media&token=c1c545dc-0899-4aa9-a739-1d331a98825b');
+  }
+  80%,
+  98% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image5.png?alt=media&token=e971ec56-5deb-48d6-9f52-d19572ff8767');
+  }
+}
+
+/* Landing page image show */
+#landing-page {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/ocean%20beach%20feathering%20drop%202.jpg?alt=media&token=bec7f142-510e-47f8-883e-3c882a190e59');
+  height: 100vh;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 3rem;
+
+  /* animation-name: landingImage;
+  animation-duration: 40s;
+  animation-delay: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite; */
+}
+
+@media only screen and (max-width: 376px) {
+  #landing-page {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/ocean%20beach%20feathering%20drop%202.jpg?alt=media&token=bec7f142-510e-47f8-883e-3c882a190e59');
+    height: 812px !important;
+    width: 100%;
+    margin-bottom: 1rem;
+    animation-name: noAnimation;
+  }
+
+  .header-copy {
+    font-size: 72px;
+    margin-top: 12rem;
+  }
+
+  .mobile-middle {
+    position: absolute;
+    top: 7rem;
+  }
+}
+
+@-webkit-keyframes landingImage {
+  0%,
+  15% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image-friends-desktop.png?alt=media&token=1ab7f515-d825-4409-9951-5a28e2bf01ec');
+  }
+  20%,
+  35% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image2.png?alt=media&token=e8d80a2a-d9d3-456b-82c7-88f69f456c71');
+  }
+  40%,
+  55% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image3_2.png?alt=media&token=5421f8ba-70b1-4c45-a000-9d3a2436bba4');
+  }
+  60%,
+  75% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image4.png?alt=media&token=c1c545dc-0899-4aa9-a739-1d331a98825b');
+  }
+  80%,
+  95% {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/surf-trip-list.appspot.com/o/cover-images%2Flanding-image5.png?alt=media&token=e971ec56-5deb-48d6-9f52-d19572ff8767');
+  }
+
+  /* MINIMIZE IMAGE SIZES AND MOVE ON! YOU DID GREAT! */
+  /* 19% {
+    background-position-y: bottom;
+  }
+  19% {
+    background-position: center;
+  }
+  39% {
+    background-position-y: bottom;
+  }
+  60% {
+    background-position-y: bottom;
+  }
+  80% {
+    background-position-y: bottom;
+  }
+  100% {
+    background-position-y: bottom;
+  } */
+}
